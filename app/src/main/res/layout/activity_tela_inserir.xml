@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaInserir"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-26dp">
+
+    <EditText
+        android:id="@+id/et_nome_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="nome"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/et_caixa_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cnpj_principal"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_cnpj_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="CNPJ"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/et_nome_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_caixa_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="caixa"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="253dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="176dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_caixa_principal">
+
+        <RadioButton
+            android:id="@+id/rb_cinema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cinema"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="245dp" />
+
+        <RadioButton
+            android:id="@+id/rb_acougue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="acougue"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+        <RadioButton
+            android:id="@+id/rb_padaria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="padaria"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/ed_num_assentos"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="76dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="numero de assentos"
+        android:inputType="textMultiLine"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/ed_peso_de_farinha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_peso_de_farinha"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Peso de farinha"
+        android:inputType="textMultiLine"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="634dp" />
+
+    <Button
+        android:id="@+id/bt_inserir_empresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inserir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_peso_de_farinha"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bt_voltar_inserir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ed_peso_picanha"
+        android:layout_width="197dp"
+        android:layout_height="42dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="575dp"
+        android:hint="Peso de picanha"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
